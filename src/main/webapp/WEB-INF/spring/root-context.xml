@@ -4,5 +4,29 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+	
+	<!-- 객체 생성, 주입 -->
+	<!-- DBConnector db = new DBConnecotr() -->
+	<bean class="com.iu.s1.util.DBConnector" id="dBConnector"></bean>
+	<!-- BankbookDAO dao = new BankbookDAO(dbconnenctor) -->
+	<bean class="com.iu.s1.bankbook.BankBookDAO" id="bankBookDAO">
+<!-- 	<constructor-arg index="0" ref="dBConnector"></constructor-arg>
+		<constructor-arg index="1" value="10"></constructor-arg>
+		<constructor-arg index="2" value="iu"></constructor-arg>
+	
+		<constructor-arg type="com.iu.s1.util.DBConnector" ref="dBConnector"></constructor-arg>
+		<constructor-arg type="int" value="10"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="iu"></constructor-arg>
+ -->
+ 		<constructor-arg name="dbConnector" ref="dBConnector"></constructor-arg>
+ 		<constructor-arg name="num" value="10"></constructor-arg>
+ 		<constructor-arg name="name" value="iu"></constructor-arg>
+	</bean>	
+	
+	<!-- BankbookService bankbookService = new BankbookService()  -->
+	<bean class="com.iu.s1.bankbook.BankbookService" id="bankbookService">
+		<!-- setXXX -->
+		<property name="bankBookDAO" ref="bankBookDAO"></property>
+	</bean>
+	
 </beans>

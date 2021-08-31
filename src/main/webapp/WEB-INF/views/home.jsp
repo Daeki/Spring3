@@ -12,6 +12,7 @@
 	
 	<h1>Renewal</h1>
 
+	<img alt="test" src="./images/iu2.jpg">
 
 
 
