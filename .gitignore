@@ -122,3 +122,4 @@ DBConnect.java
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,eclipse,java
 target/m2e-wtp/web-resources/META-INF/maven/com.iu/s1/pom.properties
+pom.properties
