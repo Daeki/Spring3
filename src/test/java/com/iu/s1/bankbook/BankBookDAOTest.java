@@ -14,6 +14,8 @@ public class BankBookDAOTest extends MyJunitTest {
 	@Autowired
 	private BankBookDAO bankBookDAO;
 	
+	
+	
 	@Test
 	public void setInsertTest() {
 		BankBookDTO bankBookDTO = new BankBookDTO();

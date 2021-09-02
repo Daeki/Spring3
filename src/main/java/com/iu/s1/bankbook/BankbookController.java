@@ -45,8 +45,14 @@ public class BankbookController {
 		model.addAttribute("dto", bankBookDTO);
 	}
 	
-	@RequestMapping("bankbookInsert")
-	public void insert(BankBookDTO bankBookDTO) {
+	@RequestMapping(value="bankbookInsert", method = RequestMethod.GET)
+	public void insert() {}
+	
+	@RequestMapping(value="bankbookInsert", method = RequestMethod.POST)
+	public String insert(BankBookDTO bankBookDTO) {
+		int result = bankBookService.setInsert(bankBookDTO);
+		
+		return "redirect:./bankbookList";
 		
 	}
 	
