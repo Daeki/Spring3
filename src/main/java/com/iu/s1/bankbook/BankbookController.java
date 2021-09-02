@@ -32,16 +32,22 @@ public class BankbookController {
 	}
 	
 	@RequestMapping("bankbookSelect")
-	public void select(BankBookDTO bankBookDTO, Model model) {
+	public void select(HttpServletRequest request, BankBookDTO bankBookDTO, Model model) {
+//		String bn = request.getParameter("bookNumber");
+//		long l = Long.parseLong(bn);
+//		BankBookDTO banDto = new BankBookDTO();
+//		banDto.setBookNumber(l);
+		System.out.println("select");
+		System.out.println(bankBookDTO.getBookNumber());
+		
 		bankBookDTO = bankBookService.getSelect(bankBookDTO);
-		model.addAttribute("dtov", bankBookDTO);
+		System.out.println("Name : "+bankBookDTO.getBookName());
+		model.addAttribute("dto", bankBookDTO);
 	}
 	
-	@RequestMapping("bankbookInsert.do")
-	public String insert(BankBookDTO bankBookDTO) {
-		System.out.println(bankBookDTO.getBookName());
-		System.out.println("insert");
-		return "redirect:../";
+	@RequestMapping("bankbookInsert")
+	public void insert(BankBookDTO bankBookDTO) {
+		
 	}
 	
 

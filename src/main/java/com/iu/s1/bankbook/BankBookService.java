@@ -20,6 +20,7 @@ public class BankBookService {
 	}
 	
 	public BankBookDTO getSelect(BankBookDTO bankBookDTO) {
+		System.out.println("Service : "+bankBookDTO.getBookNumber());
 		return bankBookDAO.getSelect(bankBookDTO);
 	}
 
