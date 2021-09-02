@@ -38,7 +38,7 @@ public class BankbookController {
 //		BankBookDTO banDto = new BankBookDTO();
 //		banDto.setBookNumber(l);
 		System.out.println("select");
-		System.out.println(bankBookDTO.getBookNumber());
+		System.out.println("number : "+bankBookDTO.getBookNumber());
 		
 		bankBookDTO = bankBookService.getSelect(bankBookDTO);
 		System.out.println("Name : "+bankBookDTO.getBookName());
@@ -55,6 +55,16 @@ public class BankbookController {
 		return "redirect:./bankbookList";
 		
 	}
+	
+	@RequestMapping("bankbookDelete")
+	public String delete(Long bookNumber) {
+		System.out.println(bookNumber);
+		int result = bankBookService.setDelete(bookNumber);
+		
+		return "redirect:./bankbookList";
+		
+	}
+	
 	
 
 }

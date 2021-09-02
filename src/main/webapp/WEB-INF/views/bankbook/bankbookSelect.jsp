@@ -17,7 +17,7 @@
 		<h3>BookRate : ${dto.bookRate} </h3>
 		<h3>BookSale : ${dto.bookSale}</h3>
 		
-	
+		<a href="./bankbookDelete?bookNumber=${dto.bookNumber}">Delete</a>
 	</div>
 
 </body>
