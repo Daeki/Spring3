@@ -27,6 +27,11 @@
 			
 			
 		</table>
+		
+		<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="n">
+			<a href="./bankbookList?pn=${n}">${n}</a>
+		</c:forEach>
+		
 		<a href="./bankbookInsert" class="btn btn-danger">ADD</a>
 	</div>
 </div>
