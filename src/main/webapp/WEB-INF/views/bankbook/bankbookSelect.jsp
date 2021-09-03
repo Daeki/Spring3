@@ -18,6 +18,7 @@
 		<h3>BookSale : ${dto.bookSale}</h3>
 		
 		<a href="./bankbookDelete?bookNumber=${dto.bookNumber}">Delete</a>
+		<a href="./bankbookUpdate?bookNumber=${dto.bookNumber}">Update</a>
 	</div>
 
 </body>

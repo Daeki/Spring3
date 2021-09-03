@@ -65,6 +65,17 @@ public class BankbookController {
 		
 	}
 	
+	@RequestMapping(value = "bankbookUpdate", method = RequestMethod.GET)
+	public ModelAndView update(BankBookDTO bankBookDTO) {
+		bankBookDTO = bankBookService.getSelect(bankBookDTO);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("bankbook/bankbookUpdate");
+		mv.addObject("dto", bankBookDTO);
+		
+		return mv;
+	}
+	
 	
 
 }
