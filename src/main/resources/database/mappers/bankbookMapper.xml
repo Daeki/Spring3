@@ -5,7 +5,10 @@
   
   <mapper namespace="com.iu.s1.bankbook.BankBookDAO">
   	<update id="setUpdate" parameterType="com.iu.s1.bankbook.BankBookDTO">
-  		update bankbook set bookName=#{bookName}, bookRate=#{bookRate}, bookSale=#{bookSale} 
+  		update bankbook set 
+  		bookName=#{bookName}, 
+  		bookRate=#{bookRate}, 
+  		bookSale=#{bookSale} 
   		where bookNumber=#{bookNumber}
   	</update>
   
@@ -20,8 +23,16 @@
   	
   	
   	
-  	<select id="getList" resultType="com.iu.s1.bankbook.BankBookDTO">
-  		SELECT * FROM BANKBOOK
+  	<select id="getList" resultType="com.iu.s1.bankbook.BankBookDTO" parameterType="com.iu.s1.util.Pager" >
+  		SELECT * FROM
+    		(SELECT rownum R, BK.* FROM
+        		(SELECT * 
+         		 FROM BANKBOOK 
+         		 ORDER BY BOOKNUMBER desc
+         		)
+       		 BK
+    		)
+		WHERE R between #{startRow} and #{lastRow}
   	</select>
   	
   	<select id="getSelect" parameterType="com.iu.s1.bankbook.BankBookDTO" resultType="com.iu.s1.bankbook.BankBookDTO">
