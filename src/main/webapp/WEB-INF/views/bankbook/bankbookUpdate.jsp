@@ -13,6 +13,7 @@
 
 <div class="container-fluid">
 	<form class="col-md-5 mx-auto" action="./bankbookUpdate" method="post">
+		<input type="hidden" readonly="readonly" value="${dto.bookNumber}" name="bookNumber">
 		<div class="mb-3">
   			<label for="bookName" class="form-label">Book Name</label>
   			<input type="text" class="form-control" value="${dto.bookName}" name="bookName" id="bookName" placeholder="Enter BookName">
