@@ -12,6 +12,36 @@
 <h1>List Renewal</h1>
 <div class="container-fluid">
 	<div class="col-md-7 my-2 mx-auto">
+		<!-- search Form Start-->
+		<form action="">
+		<div class="input-group mb-3">
+		  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+		    <span class="visually-hidden">Toggle Dropdown</span>
+		  </button>
+		  <ul class="dropdown-menu">
+		    <li><a class="dropdown-item" href="#">Action</a></li>
+		    <li><a class="dropdown-item" href="#">Another action</a></li>
+		    <li><a class="dropdown-item" href="#">Something else here</a></li>
+		    <li><hr class="dropdown-divider"></li>
+		    <li><a class="dropdown-item" href="#">Separated link</a></li>
+		  </ul>
+		  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+		  
+		
+		  <button type="button" class="btn btn-outline-secondary">Action</button>
+		</div>		
+			
+		
+		
+			
+			
+		</form>
+		
+		
+		
+		<!-- search From Finish -->
+		
+		
 		<table class="table table-hover">
 			<tr>
 				<th>Number</th><th>Name</th><th>Rate</th>
