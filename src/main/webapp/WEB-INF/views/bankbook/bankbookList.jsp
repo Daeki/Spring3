@@ -32,13 +32,13 @@
 		<nav aria-label="Page navigation example">
 		  <ul class="pagination">
 		    <li class="page-item">
-		      <a class="page-link" href="#" aria-label="Previous">
+		      <a class="page-link" href="./bankbookList" aria-label="Previous">
 		        <span aria-hidden="true">&laquo;</span>
 		      </a>
 		    </li>
 		    
 		   	<li class="page-item">
-		      <a class="page-link" href="#" aria-label="Previous">
+		      <a class="page-link" href="./bankbookList?pn=${pager.startNum-1}" aria-label="Previous">
 		        <span aria-hidden="true">&lt;</span>
 		      </a>
 		    </li>
@@ -48,13 +48,13 @@
 			</c:forEach>
 			
 			<li class="page-item">
-		      <a class="page-link" href="#" aria-label="Next">
+		      <a class="page-link" href="./bankbookList?pn=${pager.lastNum+1}" aria-label="Next">
 		        <span aria-hidden="true">&gt;</span>
 		      </a>
 		    </li>
 		   
 		    <li class="page-item">
-		      <a class="page-link" href="#" aria-label="Next">
+		      <a class="page-link" href="./bankbookList?pn=${pager.totalPage}" aria-label="Next">
 		        <span aria-hidden="true">&raquo;</span>
 		      </a>
 		    </li>
