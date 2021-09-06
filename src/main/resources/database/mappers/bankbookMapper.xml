@@ -4,8 +4,27 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.iu.s1.bankbook.BankBookDAO">
-  	<select id="getCount" resultType="java.lang.Long">
+  	<select id="getCount" resultType="java.lang.Long" parameterType="com.iu.s1.util.Pager">
   		select count(booknumber) from bankbook
+  		WHERE 
+         		 
+         		 <choose>
+         		 	<when test="kind == 'num'">
+         		 		bookNumber
+         		 	</when>
+         		 	
+         		 	<when test="kind == 'name'">
+         		 		bookName
+         		 	</when>
+         		 	
+         		 	<otherwise>
+         		 		bookRate
+         		 	</otherwise>
+         		 
+         		 </choose>
+         		 
+         		LIKE '%' || #{search} || '%'
+         		
   	</select>
   
   	<update id="setUpdate" parameterType="com.iu.s1.bankbook.BankBookDTO">

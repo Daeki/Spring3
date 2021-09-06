@@ -51,29 +51,29 @@
 		<nav aria-label="Page navigation example">
 		  <ul class="pagination">
 		    <li class="page-item">
-		      <a class="page-link" href="./bankbookList" aria-label="Previous">
+		      <a class="page-link" href="./bankbookList?kind=${pager.kind}&search=${pager.search}" aria-label="Previous">
 		        <span aria-hidden="true">&laquo;</span>
 		      </a>
 		    </li>
 		    
 		   	<li class="page-item">
-		      <a class="page-link" href="./bankbookList?pn=${pager.startNum-1}" aria-label="Previous">
+		      <a class="page-link" href="./bankbookList?pn=${pager.startNum-1}&kind=${pager.kind}&search=${pager.search}" aria-label="Previous">
 		        <span aria-hidden="true">&lt;</span>
 		      </a>
 		    </li>
 		    
 			<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="n">
-				<li class="page-item"><a class="page-link" href="./bankbookList?pn=${n}">${n}</a></li>
+				<li class="page-item"><a class="page-link" href="./bankbookList?pn=${n}&kind=${pager.kind}&search=${pager.search}">${n}</a></li>
 			</c:forEach>
 			
 			<li class="page-item">
-		      <a class="page-link" href="./bankbookList?pn=${pager.lastNum+1}" aria-label="Next">
+		      <a class="page-link" href="./bankbookList?pn=${pager.lastNum+1}&kind=${pager.kind}&search=${pager.search}" aria-label="Next">
 		        <span aria-hidden="true">&gt;</span>
 		      </a>
 		    </li>
 		   
 		    <li class="page-item">
-		      <a class="page-link" href="./bankbookList?pn=${pager.totalPage}" aria-label="Next">
+		      <a class="page-link" href="./bankbookList?pn=${pager.totalPage}&kind=${pager.kind}&search=${pager.search}" aria-label="Next">
 		        <span aria-hidden="true">&raquo;</span>
 		      </a>
 		    </li>
