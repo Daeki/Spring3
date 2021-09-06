@@ -32,7 +32,25 @@
     		(SELECT rownum R, BK.* FROM
         		(SELECT * 
          		 FROM BANKBOOK 
+         		 WHERE 
          		 
+         		 <choose>
+         		 	<when test="kind == 'num'">
+         		 		bookNumber
+         		 	</when>
+         		 	
+         		 	<when test="kind == 'name'">
+         		 		bookName
+         		 	</when>
+         		 	
+         		 	<otherwise>
+         		 		bookRate
+         		 	</otherwise>
+         		 
+         		 </choose>
+         		 
+         		 
+         		 LIKE '%' || #{search} || '%'
          		 ORDER BY BOOKNUMBER desc
          		)
        		 BK

@@ -13,17 +13,17 @@
 <div class="container-fluid">
 	<div class="col-md-7 my-2 mx-auto">
 		<!-- search Form Start-->
-		<form action="">
+		<form action="./bankbookList" method="get">
 		
 		 <div class="input-group mb-3" >
-		  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-			  <option value="1">Num</option>
-			  <option value="2">Name</option>
-			  <option value="3">Rate</option>
-			</select>
+		  <select name="kind" class="form-select form-select-sm" aria-label=".form-select-sm example">
+			  <option value="num">Num</option>
+			  <option value="name">Name</option>
+			  <option value="rate">Rate</option>
+		  </select>
 		  
-		  <input type="text" class="form-control" aria-label="Text input with dropdown button">
-		  <button type="button" class="btn btn-outline-secondary">Action</button>
+		  <input type="text" name="search" class="form-control" aria-label="Text input with dropdown button">
+		  <button type="submit" class="btn btn-outline-secondary">Search</button>
 		</div>
 			
 		</form>

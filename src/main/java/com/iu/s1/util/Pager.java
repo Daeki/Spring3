@@ -2,6 +2,9 @@ package com.iu.s1.util;
 
 public class Pager {
 	
+	private String kind;
+	private String search;
+	
 	private Long pn;
 	private Long perPage;
 	
@@ -60,6 +63,23 @@ public class Pager {
 	
 	
 	
+	
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+
+	public String getSearch() {
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
 	public Long getPerPage() {
 		if(this.perPage==null || this.perPage==0) {
 			this.perPage=10L;
