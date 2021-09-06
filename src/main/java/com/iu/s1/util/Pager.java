@@ -19,9 +19,9 @@ public class Pager {
 		this.lastRow = this.getPn()*this.getPerPage();		
 	}
 	
-	public void makeNum() {
+	public void makeNum(Long totalCount) {
 		//1. totalCount
-		Long totalCount=212L;
+		//Long totalCount=212L;
 		
 		//2. totalPage 구하기 11
 		totalPage= totalCount/this.getPerPage();
