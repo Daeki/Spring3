@@ -15,15 +15,13 @@
 		<!-- search Form Start-->
 		<form action="">
 		
-		 <div class="input-group mb-3">
-		  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-		  <ul class="dropdown-menu">
-		    <li><a class="dropdown-item" href="#">Action</a></li>
-		    <li><a class="dropdown-item" href="#">Another action</a></li>
-		    <li><a class="dropdown-item" href="#">Something else here</a></li>
-		    <li><hr class="dropdown-divider"></li>
-		    <li><a class="dropdown-item" href="#">Separated link</a></li>
-		  </ul>
+		 <div class="input-group mb-3" >
+		  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+			  <option value="1">Num</option>
+			  <option value="2">Name</option>
+			  <option value="3">Rate</option>
+			</select>
+		  
 		  <input type="text" class="form-control" aria-label="Text input with dropdown button">
 		  <button type="button" class="btn btn-outline-secondary">Action</button>
 		</div>
